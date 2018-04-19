@@ -36,3 +36,13 @@ void string_lowercase(char *str) {
 		string_lowercase(str + 1);
 	}	
 }
+
+void le_string(char *str) {
+	*str = getchar();
+	if(*str == '\n') {
+		*str = '\0';
+		return;
+	} else {
+		le_string(str + 1);
+	}
+}
